@@ -1,0 +1,125 @@
+:root {
+  font-size: 0.625rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #837e9f;
+}
+
+body {
+  background-color: #22212c;
+  font: 1.3rem;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  gap: 6rem;
+  padding: 4rem;
+}
+.container div {
+  background-color: #302f3d;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 3.2rem;
+}
+
+aside {
+  max-width: 348px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+main {
+  flex: 1;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile_image {
+  width: 128px;
+  border-radius: 50%;
+  border: 2px solid #ff00ee;
+}
+
+.profile_name {
+  margin: 2rem 0 1rem 0;
+}
+
+.profile_links,
+.technologies_list {
+  list-style: none;
+}
+
+.profile_links li + li {
+  margin-top: 2rem;
+}
+
+.profile_links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.technologies_list {
+  display: grid;
+  grid-template-columns: repeat(3, 86px);
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.technologies_list li {
+  color: #000000;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+  padding: 6px;
+  background-color: #cb92b1;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+/* utils */
+
+.list li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 1.4rem;
+}
+
+.list {
+  margin-top: 2rem;
+}
+
+.list li + li {
+  margin-top: 1rem;
+}
+
+.title-xl {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.title-l {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.title-s {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.text-light {
+  font-weight: 300;
+}
