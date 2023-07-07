@@ -11,26 +11,18 @@
 
 body {
   background-color: #22212c;
-  font: 1.3rem;
+  font-size: 1.3rem;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
 }
 
 .container {
-  display: flex;
   gap: 6rem;
   padding: 4rem;
+  display: flex;
 }
-.container div {
-  background-color: #302f3d;
-  border-radius: 2rem;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  padding: 3.2rem;
-}
-
 aside {
   max-width: 348px;
-  display: flex;
   flex-direction: column;
   gap: 3rem;
 }
@@ -64,13 +56,11 @@ main {
 
 .profile_links a {
   text-decoration: none;
-  display: flex;
   align-items: center;
   gap: 2rem;
 }
 
 .technologies_list {
-  display: grid;
   grid-template-columns: repeat(3, 86px);
   gap: 1.5rem;
   align-items: center;
@@ -88,7 +78,57 @@ main {
   text-transform: uppercase;
 }
 
+.projects {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects_link {
+  text-decoration: none;
+  transition: color ease 0.2s;
+}
+
+.projects_link:hover {
+  color: #ff00ee;
+}
+
+.projects_principals {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 3rem;
+  gap: 3rem;
+  list-style: none;
+  line-height: 1.5;
+}
+
+.project_name {
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.project_name + p {
+  margin: 2rem 0 2rem 0;
+}
+
+.project_language {
+  gap: 8px;
+  align-items: center;
+}
+
 /* utils */
+.card {
+  background-color: #302f3d;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
 
 .list li {
   display: flex;
@@ -122,4 +162,55 @@ main {
 
 .text-light {
   font-weight: 300;
+}
+
+@media (max-width: 985px) {
+  .container {
+    padding: 3rem;
+    gap: 3rem;
+  }
+
+  .projects_principals {
+    grid-template-columns: none;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 822px) {
+  .container {
+    flex-direction: column;
+  }
+  aside {
+    max-width: 100vw;
+  }
+  .profile_links a {
+    gap: 1rem;
+  }
+
+  .technologies_list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .title-l {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 1.2rem;
+  }
+  .profile_links a img {
+    width: 16px;
+  }
+  .technologies_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .title-xl {
+    font-size: 2rem;
+  }
 }
